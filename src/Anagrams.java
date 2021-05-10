@@ -9,10 +9,10 @@ public class Anagrams {
     public static void main(String[] args) throws IOException {
         BufferedReader inputText = new BufferedReader(new InputStreamReader(System.in));
         String text;
-        System.out.println("Введи текст ");
-        System.out.println("Для выхода жми end ");
+        System.out.println("Enter the text ");
+        System.out.println("To exit, enter - e ");
         while ((text = inputText.readLine()) != null) {
-            if (text.equals("end")) {
+            if (text.equals("e")) {
                 System.out.println("GOOD BYE");
                 break;
             }

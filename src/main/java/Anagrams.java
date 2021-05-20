@@ -2,8 +2,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 public class Anagrams {
@@ -23,8 +23,10 @@ public class Anagrams {
     }
 
 
-
     public static String flipText(String inputText){
+        if (inputText == null) {
+            inputText = "";
+        }
         String[] words = inputText.split(" ");
         StringBuilder reverseText = new StringBuilder();
         String word ;
@@ -40,7 +42,7 @@ public class Anagrams {
 
 
     private static String reverseWord(String word) {
-        Map<Integer, Character> initialNonLetterOrder = new HashMap<>();
+        Map<Integer, Character> initialNonLetterOrder = new TreeMap<>();
         StringBuilder reverseWord = new StringBuilder();
 
         for (int i = word.length() - 1; i >= 0; i--) {
